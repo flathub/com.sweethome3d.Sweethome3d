@@ -30,19 +30,19 @@
     <screenshot type="default">
       <caption>Main Window</caption>
       <image width="1141" height="842">
-        https://raw.githubusercontent.com/hadess/flathub/sweethome3d/sshots/sweethome3d-default-view-haussmann.png
+        https://raw.githubusercontent.com/flathub/com.sweethome3d.Sweethome3d/master/sshots/sweethome3d-default-view-haussmann.png
       </image>
     </screenshot>
     <screenshot>
       <caption>Separate 3D View</caption>
       <image width="975" height="703">
-        https://raw.githubusercontent.com/hadess/flathub/sweethome3d/sshots/sweethome3d-default-view-virtual-view.png
+        https://raw.githubusercontent.com/flathub/com.sweethome3d.Sweethome3d/master/sshots/sweethome3d-virtual-view.png
       </image>
     </screenshot>
     <screenshot>
       <caption>Main Window (“Loft with office”)</caption>
       <image width="1212" height="842">
-        https://raw.githubusercontent.com/hadess/flathub/sweethome3d/sshots/sweethome3d-default-view-alps.png
+        https://raw.githubusercontent.com/flathub/com.sweethome3d.Sweethome3d/master/sshots/sweethome3d-default-view-alps.png
       </image>
     </screenshot>
   </screenshots>
