@@ -20,7 +20,7 @@
                 "mkdir /app/lib/",
                 "cp -r ./ /app/lib/sweethome3d/",
                 "mkdir -p /app/bin/",
-                "ln -s /app/lib/sweethome3d/SweetHome3D /app/bin/",
+                "install -m755 launcher.sh /app/bin/SweetHome3D",
                 "install -Dm644 SweetHome3DIcon.png /app/share/icons/com.sweethome3d.Sweethome3d.png",
                 "install -Dm644 com.sweethome3d.Sweethome3d.desktop /app/share/applications/com.sweethome3d.Sweethome3d.desktop",
                 "install -Dm644 com.sweethome3d.Sweethome3d.metainfo.xml /app/share/metainfo/com.sweethome3d.Sweethome3d.metainfo.xml",
@@ -46,6 +46,10 @@
                 {
                     "type": "file",
                     "path": "com.sweethome3d.Sweethome3d.mime.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "launcher.sh"
                 }
             ]
         }
