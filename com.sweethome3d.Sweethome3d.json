@@ -1,6 +1,6 @@
 {
     "app-id" : "com.sweethome3d.Sweethome3d",
-    "branch": "stable",
+    "default-branch": "stable",
     "runtime" : "org.freedesktop.Platform",
     "runtime-version" : "19.08",
     "sdk" : "org.freedesktop.Sdk",
@@ -32,8 +32,8 @@
                 {
                     "type": "archive",
                     "only-arches": ["x86_64"],
-                    "sha256": "5c2090b16c32e52637e87a48197a13d30a0322940949431bbb898b7b082cfca6",
-                    "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-6.2/SweetHome3D-6.2-linux-x64.tgz"
+                    "sha256": "9f1e20e0c46a6a87254b47dd5e681aa8d31ddb98f526256fd60ae07601f43844",
+                    "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-6.3/SweetHome3D-6.3-linux-x64.tgz"
                 },
                 {
                     "type": "file",
