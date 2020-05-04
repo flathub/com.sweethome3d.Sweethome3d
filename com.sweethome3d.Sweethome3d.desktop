@@ -8,3 +8,4 @@ MimeType=application/x-sweet-home-3d;
 Terminal=false
 Icon=com.sweethome3d.Sweethome3d
 Keywords=interior;design;sweet;home;flat;apartment;plan;floor;furniture;decoration;CAD;furniture;
+PrefersNonDefaultGPU=true
