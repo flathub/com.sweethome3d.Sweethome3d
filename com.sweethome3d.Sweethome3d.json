@@ -19,6 +19,7 @@
             "build-commands": [
                 "mkdir /app/lib/",
                 "cp -r ./ /app/lib/sweethome3d/",
+                "sed -i -e 's%-Xmx2g%-Xmx2g -Dsun.java2d.opengl=true%g' /app/lib/sweethome3d/SweetHome3D",
                 "mkdir -p /app/bin/",
                 "install -m755 launcher.sh /app/bin/SweetHome3D",
                 "install -Dm644 SweetHome3DIcon.png /app/share/icons/com.sweethome3d.Sweethome3d.png",
