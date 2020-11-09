@@ -18,10 +18,10 @@
             "buildsystem": "simple",
             "build-commands": [
                 "mkdir /app/lib/",
-                "cp -r ./ /app/lib/sweethome3d/",
+                "cp -r ./SweetHome3D/ /app/lib/sweethome3d/",
                 "mkdir -p /app/bin/",
                 "install -m755 launcher.sh /app/bin/SweetHome3D",
-                "install -Dm644 SweetHome3DIcon.png /app/share/icons/com.sweethome3d.Sweethome3d.png",
+                "install -Dm644 ./SweetHome3D/SweetHome3DIcon.png /app/share/icons/com.sweethome3d.Sweethome3d.png",
                 "install -Dm644 com.sweethome3d.Sweethome3d.desktop /app/share/applications/com.sweethome3d.Sweethome3d.desktop",
                 "install -Dm644 com.sweethome3d.Sweethome3d.metainfo.xml /app/share/metainfo/com.sweethome3d.Sweethome3d.metainfo.xml",
                 "mkdir -p /app/share/mime/packages/",
@@ -33,7 +33,8 @@
                     "type": "archive",
                     "only-arches": ["x86_64"],
                     "sha256": "d9b28feb4da170427ae57a11fc506c22c611dec1216c547f81d340352c252739",
-                    "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-6.4/SweetHome3D-6.4-linux-x64.tgz"
+                    "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-6.4/SweetHome3D-6.4-linux-x64.tgz",
+                    "dest": "SweetHome3D"
                 },
                 {
                     "type": "file",
