@@ -48,6 +48,7 @@
   </screenshots>
   <update_contact>hadess@hadess.net</update_contact>
   <developer_name>eTeks</developer_name>
+  <url type="donation">http://www.sweethome3d.com/donate.jsp</url>
   <translation/>
   <releases>
     <release date="2020-07-21" version="6.4"/>
