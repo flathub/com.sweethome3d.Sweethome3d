@@ -1,18 +1,18 @@
 {
-    "app-id" : "com.sweethome3d.Sweethome3d",
+    "app-id": "com.sweethome3d.Sweethome3d",
     "default-branch": "stable",
-    "runtime" : "org.freedesktop.Platform",
-    "runtime-version" : "19.08",
-    "sdk" : "org.freedesktop.Sdk",
-    "command" : "SweetHome3D",
-    "finish-args" : [
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "19.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "SweetHome3D",
+    "finish-args": [
         "--share=ipc",
         "--socket=x11",
         "--socket=pulseaudio",
         "--device=dri",
         "--filesystem=home"
     ],
-    "modules" : [
+    "modules": [
         {
             "name": "sweethome3d",
             "buildsystem": "simple",
@@ -29,10 +29,12 @@
                 "install -m644 -p -t /app/share/mime/packages com.sweethome3d.Sweethome3d.mime.xml",
                 "update-mime-database /app/share/mime"
             ],
-            "sources" : [
+            "sources": [
                 {
                     "type": "archive",
-                    "only-arches": ["x86_64"],
+                    "only-arches": [
+                        "x86_64"
+                    ],
                     "sha256": "d9b28feb4da170427ae57a11fc506c22c611dec1216c547f81d340352c252739",
                     "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-6.4/SweetHome3D-6.4-linux-x64.tgz",
                     "dest": "SweetHome3D"
