@@ -37,7 +37,13 @@
                     ],
                     "sha256": "d9b28feb4da170427ae57a11fc506c22c611dec1216c547f81d340352c252739",
                     "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-6.4/SweetHome3D-6.4-linux-x64.tgz",
-                    "dest": "SweetHome3D"
+                    "dest": "SweetHome3D",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "http://www.sweethome3d.com/",
+                        "version-pattern": "<a href=\"history.jsp\">Version ([\\d\\.-]*)</a>",
+                        "url-template": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-$version/SweetHome3D-$version-linux-x64.tgz"
+                    }
                 },
                 {
                     "type": "file",
