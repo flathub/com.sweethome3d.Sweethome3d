@@ -36,7 +36,7 @@
                         "x86_64"
                     ],
                     "sha256": "b7a0d6bd6fc225f4d575db4d762c362dc3756cc79110cb6d6a2152de78f71b0e",
-                    "url": "https://freefr.dl.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-6.5/SweetHome3D-6.5-linux-x64.tgz",
+                    "url": "https://netactuate.dl.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-6.5/SweetHome3D-6.5-linux-x64.tgz",
                     "dest": "SweetHome3D",
                     "x-checker-data": {
                         "type": "html",
