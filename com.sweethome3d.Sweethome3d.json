@@ -40,8 +40,8 @@
                     "dest": "SweetHome3D",
                     "x-checker-data": {
                         "type": "html",
-                        "url": "http://www.sweethome3d.com/",
-                        "version-pattern": "<a href=\"history.jsp\">Version ([\\d\\.-]*)</a>",
+                        "url": "http://www.sweethome3d.com/history.jsp",
+                        "version-pattern": "</a>Version \n        ([\\d\\.-]*), ",
                         "url-template": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-$version/SweetHome3D-$version-linux-x64.tgz"
                     }
                 },
