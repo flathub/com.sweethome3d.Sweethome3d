@@ -51,6 +51,7 @@
   <url type="donation">http://www.sweethome3d.com/donate.jsp</url>
   <translation/>
   <releases>
+    <release version="7.0.2" date="2022-07-31"/>
     <release version="7.0" date="2022-07-13"/>
     <release version="6.6" date="2021-07-27"/>
     <release version="6.5.2" date="2021-04-23"/>
