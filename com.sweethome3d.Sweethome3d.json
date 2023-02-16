@@ -19,7 +19,6 @@
             "build-commands": [
                 "mkdir /app/lib/",
                 "cp -r ./SweetHome3D/ /app/lib/sweethome3d/",
-                "sed -i -e 's,-Xmx2g,-Xmx2g -Dsun.java2d.opengl=true,g' /app/lib/sweethome3d/SweetHome3D",
                 "mkdir -p /app/bin/",
                 "install -m755 launcher.sh /app/bin/SweetHome3D",
                 "install -Dm644 ./SweetHome3D/SweetHome3DIcon.png /app/share/icons/com.sweethome3d.Sweethome3d.png",
@@ -38,6 +37,10 @@
                     "sha256": "592fe54955827b19e8c789d1388672f1524f9ce5d052ad1ce18b3bdb959b02fe",
                     "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-7.0.2/SweetHome3D-7.0.2-linux-x64.tgz",
                     "dest": "SweetHome3D"
+                },
+                {
+                    "type": "patch",
+                    "path": "0001-Force-Java2D-to-use-OpenGL.patch"
                 },
                 {
                     "type": "file",
