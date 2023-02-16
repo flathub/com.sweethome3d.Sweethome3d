@@ -20,6 +20,8 @@
                 "mkdir /app/lib/",
                 "cp -r ./SweetHome3D/ /app/lib/sweethome3d/",
                 "mkdir -p /app/bin/",
+                "gcc -o get-scale get-scale.c `pkg-config --libs --cflags gtk4`",
+                "mv get-scale /app/bin/",
                 "install -m755 launcher.sh /app/bin/SweetHome3D",
                 "install -Dm644 ./SweetHome3D/SweetHome3DIcon.png /app/share/icons/com.sweethome3d.Sweethome3d.png",
                 "install -Dm644 com.sweethome3d.Sweethome3d.desktop /app/share/applications/com.sweethome3d.Sweethome3d.desktop",
@@ -57,6 +59,10 @@
                 {
                     "type": "file",
                     "path": "launcher.sh"
+                },
+                {
+                    "type": "file",
+                    "path": "get-scale.c"
                 }
             ]
         }
