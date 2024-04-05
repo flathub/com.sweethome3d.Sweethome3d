@@ -23,7 +23,7 @@
                 "gcc -o get-scale get-scale.c `pkg-config --libs --cflags gtk+-3.0`",
                 "mv get-scale /app/bin/",
                 "install -m755 launcher.sh /app/bin/SweetHome3D",
-                "install -Dm644 ./SweetHome3D/SweetHome3DIcon.png /app/share/icons/com.sweethome3d.Sweethome3d.png",
+                "install -m0644 -D ./SweetHome3D/SweetHome3DIcon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png",
                 "install -Dm644 com.sweethome3d.Sweethome3d.desktop /app/share/applications/com.sweethome3d.Sweethome3d.desktop",
                 "install -Dm644 com.sweethome3d.Sweethome3d.metainfo.xml /app/share/metainfo/com.sweethome3d.Sweethome3d.metainfo.xml",
                 "mkdir -p /app/share/mime/packages/",
