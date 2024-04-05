@@ -3,7 +3,7 @@
 <component type="desktop-application">
   <id>com.sweethome3d.Sweethome3d</id>
   <name>Sweet Home 3D</name>
-  <summary>Sweet Home 3D Interior Design Application</summary>
+  <summary>Interior Design Application</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <!-- license from http://www.sweethome3d.com/license.jsp -->
   <project_license>GPL-2.0-or-later</project_license>
