@@ -50,6 +50,9 @@
   <developer_name>eTeks</developer_name>
   <url type="donation">http://www.sweethome3d.com/donate.jsp</url>
   <releases>
+    <release version="7.4" date="2024-05-30">
+      <description></description>
+    </release>
     <release version="7.3" date="2024-04-04"/>
     <release version="7.2" date="2023-09-22"/>
     <release version="7.1" date="2023-03-03"/>
