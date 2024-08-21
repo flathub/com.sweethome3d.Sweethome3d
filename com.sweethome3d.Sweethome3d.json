@@ -1,6 +1,5 @@
 {
     "app-id": "com.sweethome3d.Sweethome3d",
-    "default-branch": "stable",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
