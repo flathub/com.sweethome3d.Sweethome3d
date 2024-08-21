@@ -35,8 +35,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "sha256": "e379eeebc25664f89216c1cdfb0f163fcd7be88d024fa3cc311b4d1e9b152f93",
-                    "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-7.4/SweetHome3D-7.4-linux-x64.tgz",
+                    "sha256": "53487eed09650d5cd4310733e3ec80434633ed9df372793acd6fab2c319c2322",
+                    "url": "https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-7.5/SweetHome3D-7.5-linux-x64.tgz",
                     "dest": "SweetHome3D",
                     "x-checker-data": {
                         "type": "html",
