@@ -1,7 +1,7 @@
 {
     "app-id": "com.sweethome3d.Sweethome3d",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "SweetHome3D",
     "finish-args": [
