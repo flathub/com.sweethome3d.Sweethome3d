@@ -13,10 +13,32 @@
     ],
     "modules": [
         {
+            "name": "cups",
+            "buildsystem": "simple",
+            "build-commands": [
+                "./configure",
+                "mkdir -p ${FLATPAK_DEST}/bin/",
+                "gcc berkeley/lpr.c -o ${FLATPAK_DEST}/bin/lpr -I . -lcups"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/OpenPrinting/cups/releases/download/v2.4.11/cups-2.4.11-source.tar.gz",
+                    "sha256": "9a88fe1da3a29a917c3fc67ce6eb3178399d68e1a548c6d86c70d9b13651fd71",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 380,
+                        "stable-only": true,
+                        "url-template": "https://github.com/OpenPrinting/cups/releases/download/v$version/cups-$version-source.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
             "name": "sweethome3d",
             "buildsystem": "simple",
             "build-commands": [
-                "mkdir /app/lib/",
+                "mkdir -p /app/lib/",
                 "cp -r ./SweetHome3D/ /app/lib/sweethome3d/",
                 "mkdir -p /app/bin/",
                 "gcc -o get-scale get-scale.c `pkg-config --libs --cflags gtk+-3.0`",
