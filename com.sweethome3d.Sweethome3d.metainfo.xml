@@ -6,7 +6,7 @@
   <summary>Interior Design Application</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <!-- license from http://www.sweethome3d.com/license.jsp -->
-  <project_license>GPL-2.0-or-later</project_license>
+  <project_license>GPL-2.0-or-later AND CC-BY-3.0-US AND CC-BY-3.0 AND CC0</project_license>
   <launchable type="desktop-id">com.sweethome3d.Sweethome3d.desktop</launchable>
   <content_rating type="oars-1.1"/>
   <description>
