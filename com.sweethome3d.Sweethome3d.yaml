@@ -1,0 +1,53 @@
+app-id: com.sweethome3d.Sweethome3d
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+command: SweetHome3D
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=pulseaudio
+  - --device=dri
+  - --filesystem=home
+modules:
+  - name: sweethome3d
+    buildsystem: simple
+    build-commands:
+      - mkdir /app/lib/
+      - cp -r ./SweetHome3D/ /app/lib/sweethome3d/
+      - mkdir -p /app/bin/
+      - gcc -o get-scale get-scale.c `pkg-config --libs --cflags gtk+-3.0`
+      - mv get-scale /app/bin/
+      - install -m755 launcher.sh /app/bin/SweetHome3D
+      - install -m0644 -D ./SweetHome3D/SweetHome3DIcon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+      - install -Dm644 com.sweethome3d.Sweethome3d.desktop /app/share/applications/com.sweethome3d.Sweethome3d.desktop
+      - install -Dm644 com.sweethome3d.Sweethome3d.metainfo.xml /app/share/metainfo/com.sweethome3d.Sweethome3d.metainfo.xml
+      - mkdir -p /app/share/mime/packages/
+      - install -m644 -p -t /app/share/mime/packages com.sweethome3d.Sweethome3d.mime.xml
+      - update-mime-database /app/share/mime
+    sources:
+      - type: archive
+        only-arches:
+          - x86_64
+        sha256: 53487eed09650d5cd4310733e3ec80434633ed9df372793acd6fab2c319c2322
+        url: https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-7.5/SweetHome3D-7.5-linux-x64.tgz
+        dest: SweetHome3D
+        x-checker-data:
+          type: html
+          url: https://www.sweethome3d.com/history.jsp
+          version-pattern: "</a>Version \n        ([\\d\\.-]*), "
+          url-template: https://downloads.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-$version/SweetHome3D-$version-linux-x64.tgz
+      - type: patch
+        path: 0001-Force-Java2D-to-use-OpenGL.patch
+      - type: patch
+        path: 0001-Use-get-scale-to-apply-a-scaling-factor.patch
+      - type: file
+        path: com.sweethome3d.Sweethome3d.desktop
+      - type: file
+        path: com.sweethome3d.Sweethome3d.metainfo.xml
+      - type: file
+        path: com.sweethome3d.Sweethome3d.mime.xml
+      - type: file
+        path: launcher.sh
+      - type: file
+        path: get-scale.c
