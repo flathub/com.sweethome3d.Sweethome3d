@@ -13,15 +13,18 @@ modules:
   - name: sweethome3d
     buildsystem: simple
     build-commands:
+      # App and launcher
       - mkdir /app/lib/
       - cp -r ./SweetHome3D/ /app/lib/sweethome3d/
       - mkdir -p /app/bin/
       - gcc -o get-scale get-scale.c `pkg-config --libs --cflags gtk+-3.0`
       - mv get-scale /app/bin/
       - install -m755 launcher.sh /app/bin/SweetHome3D
+      # Metadata
       - install -m0644 -D ./SweetHome3D/SweetHome3DIcon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
       - install -Dm644 com.sweethome3d.Sweethome3d.desktop /app/share/applications/com.sweethome3d.Sweethome3d.desktop
       - install -Dm644 com.sweethome3d.Sweethome3d.metainfo.xml /app/share/metainfo/com.sweethome3d.Sweethome3d.metainfo.xml
+      # File formats
       - mkdir -p /app/share/mime/packages/
       - install -m644 -p -t /app/share/mime/packages com.sweethome3d.Sweethome3d.mime.xml
       - update-mime-database /app/share/mime
