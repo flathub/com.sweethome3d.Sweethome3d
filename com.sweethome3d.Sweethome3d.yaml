@@ -29,7 +29,7 @@ modules:
       - install -m644 -p -t /app/share/mime/packages com.sweethome3d.Sweethome3d.mime.xml
       - update-mime-database /app/share/mime
       # Furniture
-      - for FURN in KatorLegaz Reallusion Scopia BlendSwap-CC-BY BlendSwap-CC-0 ; do cd $FURN; zip -r ../$FURN.sh3f *; cd ..; done
+      - for FURN in KatorLegaz Reallusion Scopia BlendSwap-CC-BY BlendSwap-CC-0 Contributions LucaPresidente Trees ; do cd $FURN; zip -r ../$FURN.sh3f *; cd ..; done
       - mkdir -p /app/share/sweethome3d/
       - install -m644 -p -t /app/share/sweethome3d *.sh3f *_copyright
     sources:
@@ -50,6 +50,12 @@ modules:
       - type: file
         sha256: d83d638a995faad33bacd8b26ee868a29347478f1649f159b8711a48b438d774
         url: https://metadata.ftp-master.debian.org/changelogs//main/s/sweethome3d-furniture/sweethome3d-furniture_1.8-1_copyright
+      - type: archive
+        sha256: 646779ce793a993ce292a58a8308d483c148ffaac21645ff983224acc5892aea
+        url: http://deb.debian.org/debian/pool/non-free/s/sweethome3d-furniture-nonfree/sweethome3d-furniture-nonfree_1.6.2.orig.tar.xz
+      - type: file
+        sha256: 41330417210694b03a01a6789255ad008ef3e48bba4f54c3a7166462000784ac
+        url: https://metadata.ftp-master.debian.org/changelogs//non-free/s/sweethome3d-furniture-nonfree/sweethome3d-furniture-nonfree_1.6.2-2_copyright
       - type: patch
         path: 0001-Force-Java2D-to-use-OpenGL.patch
       - type: patch
