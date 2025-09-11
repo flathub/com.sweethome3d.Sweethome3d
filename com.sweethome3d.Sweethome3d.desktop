@@ -3,6 +3,7 @@ Name=Sweet Home 3D
 Comment=Interior design application
 Type=Application
 Categories=Graphics;3DGraphics;Engineering;
+StartupWMClass=com-eteks-sweethome3d-SweetHome3D
 Exec=/app/bin/SweetHome3D %F
 MimeType=application/x-sweet-home-3d;
 Terminal=false
