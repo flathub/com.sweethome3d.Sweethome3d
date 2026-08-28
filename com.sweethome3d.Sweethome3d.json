@@ -8,20 +8,65 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=pulseaudio",
+        "--socket=cups",
         "--device=dri",
         "--filesystem=home"
     ],
     "modules": [
         {
+            "name": "cups",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--localstatedir=/var",
+                "--with-rundir=/var/run/cups",
+                "--with-domainsocket=/var/run/cups/cups.sock",
+                "--without-systemd",
+                "--disable-dbus",
+                "--disable-pam",
+                "--with-dnssd=no",
+                "--without-rcdir"
+            ],
+            "cleanup": [
+                "/bin",
+                "/sbin/cupsaccept",
+                "/sbin/cupsctl",
+                "/sbin/cupsd",
+                "/sbin/cupsdisable",
+                "/sbin/cupsenable",
+                "/sbin/cupsfilter",
+                "/sbin/cupsreject",
+                "/sbin/lpadmin",
+                "/sbin/lpinfo",
+                "/sbin/lpmove",
+                "/etc",
+                "/include",
+                "/lib/cups",
+                "/lib/libcupsimage*",
+                "/share"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/OpenPrinting/cups/releases/download/v2.4.19/cups-2.4.19-source.tar.gz",
+                    "sha256": "820984b12a67f98705785aae2dd1347fe0ac097828001d4583ff64574aed6389"
+                },
+                {
+                    "type": "patch",
+                    "path": "cups-disable-desktop-dir.patch"
+                }
+            ]
+        },
+        {
             "name": "sweethome3d",
             "buildsystem": "simple",
             "build-commands": [
-                "mkdir /app/lib/",
+                "mkdir -p /app/lib/",
                 "cp -r ./SweetHome3D/ /app/lib/sweethome3d/",
                 "mkdir -p /app/bin/",
                 "gcc -o get-scale get-scale.c `pkg-config --libs --cflags gtk+-3.0`",
                 "mv get-scale /app/bin/",
                 "install -m755 launcher.sh /app/bin/SweetHome3D",
+                "sh patch-jre-print.sh",
                 "install -m0644 -D ./SweetHome3D/SweetHome3DIcon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png",
                 "install -Dm644 com.sweethome3d.Sweethome3d.desktop /app/share/applications/com.sweethome3d.Sweethome3d.desktop",
                 "install -Dm644 com.sweethome3d.Sweethome3d.metainfo.xml /app/share/metainfo/com.sweethome3d.Sweethome3d.metainfo.xml",
@@ -72,6 +117,10 @@
                 {
                     "type": "file",
                     "path": "get-scale.c"
+                },
+                {
+                    "type": "file",
+                    "path": "patch-jre-print.sh"
                 }
             ]
         }

@@ -1,0 +1,25 @@
+From 0dcae4f21f0a094571115498d2ed06a1b4266ed4 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Fri, 28 Aug 2026 23:51:21 +0200
+Subject: [PATCH] disable desktop directory
+
+---
+ configure | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index 2f1329c954e0..80540c871be7 100755
+--- a/configure
++++ b/configure
+@@ -7306,7 +7306,7 @@ LIBHEADERSPRIV="\$(COREHEADERSPRIV) \$(DRIVERHEADERSPRIV)"
+ case "$COMPONENTS" in #(
+   all) :
+ 
+-    BUILDDIRS="tools filter backend berkeley cgi-bin monitor notifier ppdc scheduler systemv conf data desktop locale man doc examples templates"
++    BUILDDIRS="tools filter backend berkeley cgi-bin monitor notifier ppdc scheduler systemv conf data locale man doc examples templates"
+  ;; #(
+   core) :
+ 
+-- 
+2.55.0
+
